@@ -38,7 +38,7 @@
   "leaveRequests": [
     {
       "id": "736f",
-      "employeeId":"EMP_3o6rn",
+      "employeeId": "EMP_3o6rn",
       "reason": "wedding",
       "dateFrom": "2024-10-30",
       "numOfDays": "1",
@@ -47,11 +47,20 @@
     },
     {
       "id": "85f3",
-      "employeeId":"EMP_wQqtw",
+      "employeeId": "EMP_wQqtw",
       "reason": "birthday",
       "dateFrom": "2024-10-24",
       "numOfDays": "1",
       "applicationDate": "2024-10-22",
+      "status": "Pending"
+    },
+    {
+      "id": "c3f3",
+      "employeeId": "EMP_wQqtw",
+      "reason": "Tour",
+      "dateFrom": "2024-11-14",
+      "numOfDays": "2",
+      "applicationDate": "2024-11-11",
       "status": "Pending"
     }
   ]

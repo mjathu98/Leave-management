@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     async function loadLeaveRequests() {
         try {
-            const response = await fetch('http://localhost:3000/leaveRequests');
+            const response = await fetch(`http://localhost:3000/leaveRequests?employeeId_ne=${loggedInUser.employeeId}&_embed=employee`);
             leaveRequests = await response.json();
             renderLeaveRequests();
         } catch (error) {
@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', async function () {
             const li = document.createElement('li');
             li.classList.add('leave-item');
             li.innerHTML = `
+            <div><b>Requested By : ${request.employee.firstName + " " + request.employee.lastName}</b></div>
                 <div>Reason: ${request.reason}</div>
                 <div>From: ${request.dateFrom}</div>
                 <div>Days: ${request.numOfDays}</div>
