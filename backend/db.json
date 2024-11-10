@@ -1,0 +1,56 @@
+{
+  "employees": [
+    {
+      "id": "EMP_3o6rn",
+      "employeeId": "EMP_3o6rn",
+      "nic": "92312212v",
+      "firstName": "Jerobert",
+      "lastName": "zachariah",
+      "dob": "2024-10-25",
+      "doj": "2024-10-26"
+    },
+    {
+      "id": "EMP_wQqtw",
+      "employeeId": "EMP_wQqtw",
+      "nic": "982980135v",
+      "firstName": "mohanarajah",
+      "lastName": "jathushan",
+      "dob": "2024-10-24",
+      "doj": "2024-10-25"
+    }
+  ],
+  "users": [
+    {
+      "id": "EMP_3o6rn",
+      "employeeId": "EMP_3o6rn",
+      "username": "EMP_3o6rn",
+      "password": "pwd123",
+      "role": "Employee"
+    },
+    {
+      "username": "EMP_wQqtw",
+      "password": "pwd2410",
+      "role": "Employee",
+      "employeeId": "EMP_wQqtw",
+      "id": "EMP_wQqtw"
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "736f",
+      "reason": "wedding",
+      "dateFrom": "2024-10-30",
+      "numOfDays": "1",
+      "applicationDate": "2024-10-28",
+      "status": "Pending"
+    },
+    {
+      "id": "85f3",
+      "reason": "birthday",
+      "dateFrom": "2024-10-24",
+      "numOfDays": "1",
+      "applicationDate": "2024-10-22",
+      "status": "Pending"
+    }
+  ]
+}
