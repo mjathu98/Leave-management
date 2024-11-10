@@ -45,13 +45,15 @@ document.addEventListener('DOMContentLoaded', async function() {
 
 
         const newLeaveRequest = {
-            employeeId: loggedInUser.empId,
+            employeeId: loggedInUser.employeeId,
             reason,
             dateFrom,
             numOfDays,
             applicationDate, // Use the selected application date
             status: 'Pending' // Initial status
         };
+
+       // console.log(newLeaveRequest);
 
 
         try {
@@ -103,5 +105,5 @@ document.addEventListener('DOMContentLoaded', async function() {
     }
 
 
-    loadLeaveRequests(loggedInUser.empId);
+    loadLeaveRequests(loggedInUser.employeeId);
 });
