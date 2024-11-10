@@ -14,16 +14,16 @@ document.getElementById('loginForm').addEventListener('submit', async function (
 
 
         const response = await fetch(`http://localhost:3000/users?username=${username}&password=${password}&_embed=employee`);
-        console.log("response :",response);
+        console.log("response :", response);
 
 
         const users = await response.json();
-        console.log("users :",users);
+        //console.log("users :",users);
 
 
         if (users.length > 0) {
             const user = users[0];
-            console.log("user :",user);
+            console.log("user :", user);
             // Find the associated employee data
             const employee = user.employee;
 
@@ -34,20 +34,22 @@ document.getElementById('loginForm').addEventListener('submit', async function (
             if (employee) {
                 // Store the logged-in user and employee details
                 const loggedInUser = {
-                    ...user,  //rest operator:-full user data
+                    username: user.username,
+                    employeeId: employee.employeeId,
                     firstName: employee.firstName,
                     lastName: employee.lastName,
+                    role: user.role
                 };
 
 
-                console.log(loggedInUser);
+               // console.log(loggedInUser);
 
 
                 localStorage.setItem('loggedInUser', JSON.stringify(loggedInUser));
 
 
                 alert('Login successful!');
-                window.location.href = 'leaveRequest.html';
+                 window.location.href = 'leaveRequest.html';
             } else {
                 alert('Employee data not found.');
             }
